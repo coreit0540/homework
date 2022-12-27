@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="KO">
+    <title>Tabel태그로 만든 폼</title>
+</head>
+<body>
+    <form action="" method="post">
+        <table>
+            <tbody>
+                <tr>
+                    <th>아이디</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>패스워드</th>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <th>패스워드 확인</th>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <th>이름</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>닉네임</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>이메일</th>
+                    <td><input type="text"></td>
+                    
+                    <td>
+                        <label for="domain">@</label>
+                        <input id="domain" name="domain" list="domain_list" placeholder="도메인입력/선택">
+                        <datalist id="domain_list">
+                            <option value="naver.com"></option>
+                            <option value="hanmail.net"></option>
+                            <option value="gmail.com"></option>
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <th>이메일수신</th>
+                    <td><input type="radio" name="email_send" value="agree"><label>수신</label> <input type="radio" name="email_send" value="deny"><label>미수신</label></td>
+                </tr>
+                <!-- <tr>
+                    <th>아이디</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>아이디</th>
+                    <td><input type="text"></td>
+                </tr> -->
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
