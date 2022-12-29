@@ -1,0 +1,31 @@
+form{
+    background-color: whitesmoke;
+    width: 580px;
+    height: 360px;
+    margin : 10% auto;
+    border : 2px solid black;
+}
+
+p {
+    height: 6px;
+}
+.title{
+    width: 121px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 7px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.gol{
+    width : 15px;
+}
+.hyppen{
+    width:5px;
+}
+button{
+    display: block;
+    width: 73px;
+    margin-top: 35px;
+    margin-left: 133px;
+}

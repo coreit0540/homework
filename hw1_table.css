@@ -1,0 +1,21 @@
+table {
+    border: 2px solid black;
+    width: 580px;
+    height : 389px;
+    margin: 10% auto;
+}
+thead tr{
+    height: 10px;
+
+}
+tr{
+    width: 100%;
+}
+th {
+    width: 117px;
+    text-align: end;
+    padding-right: 10px;
+}
+tfoot{
+    height: 50px;
+}
