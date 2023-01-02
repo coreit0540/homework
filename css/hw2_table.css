@@ -1,0 +1,50 @@
+table {
+    border: 2px solid black;
+    /*border-collapse: collapse;*/
+    border-spacing: 0;
+}
+
+.col1{
+    width: 80px;
+}
+.col2{
+    width: 60px;
+}
+.col3{
+    width: 100px;
+}
+.col4{
+    width: 200px;
+}
+.col5{
+    width: 80px;
+}
+.up_title{
+    padding:0;
+    margin: 0;
+    height: 50px;
+    background-color: #7dbe98;
+    border-bottom-style: double;
+}
+thead th:not(#note_title){
+    border-right:1px solid black;
+}
+tbody{
+    /*border:*/
+}
+tbody th, tbody td{
+    /*border: 1px solid black;*/
+    font-weight: lighter;
+}
+.normal{
+    height: 100px;
+}
+.book{
+
+}
+.benefit{
+
+}
+.free{
+
+}
