@@ -47,15 +47,15 @@
                 <tr>
                     <th>이메일수신</th>
                     <td>
-                        <input type="radio" name="email_send" value="agree" id="mail_yes"><label for="mail_yes">수신</label>
-                        <input type="radio" name="email_send" value="deny" id="mail_no"><label for="mail_no">미수신</label>
+                        <input type="radio" name="email_send" value="수신" id="mail_yes"><label for="mail_yes">수신</label>
+                        <input type="radio" name="email_send" value="미수신" id="mail_no"><label for="mail_no">미수신</label>
                     </td>
                 </tr>
                 <tr>
                     <th>SMS수신</th>
                     <td>
-                        <input type="radio" name="sms_send" value="agree" id="sms_yes"><label for="sms_yes">수신</label>
-                        <input type="radio" name="sms_send" value="deny" id="sms_no"><label for="sms_no">미수신</label>
+                        <input type="radio" name="sms_send" value="수신" id="sms_yes"><label for="sms_yes">수신</label>
+                        <input type="radio" name="sms_send" value="미수신" id="sms_no"><label for="sms_no">미수신</label>
                     </td>
                 </tr>
                 <tr>
@@ -68,8 +68,8 @@
                             <option value="018">018</option>
                         </select>
                         <span class="hyphen">-</span>
-                        <input id="phone_mid" type="type" maxlength="4">
-                        <span class="hyphen">- </span><input id="phone_end" type="type" maxlength="4">
+                        <input id="phone_mid" type="text" maxlength="4">
+                        <span class="hyphen">- </span><input id="phone_end" type="text" maxlength="4">
                     </td>
                 </tr>
                 <tr>
@@ -106,7 +106,7 @@
                 </tr>
             </tbody>
             <tfoot>
-                <th></th>
+<!--                <td><button onclick="checkMailingToPic();">회원가입</button></td>-->
                 <td><button onclick="submit();">회원가입</button></td>
             </tfoot>
         </table>
