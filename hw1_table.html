@@ -61,7 +61,7 @@
                 <tr>
                     <th><label for="phone_mid">연락처</label></th>
                     <td>
-                        <select name="phone_front" id="">
+                        <select name="" id="phone_front">
                             <option value="010">010</option>
                             <option value="011">011</option>
                             <option value="016">016</option>
@@ -77,25 +77,25 @@
                     <td>
                         <select name="" id="come_path">
                             <option value="none">- 선택해 주세요-</option>
-                            <option value="">네이버 카페</option>
-                            <option value="">광고</option>
-                            <option value="">지인추천</option>
+                            <option value="네이버 카페">네이버 카페</option>
+                            <option value="광고">광고</option>
+                            <option value="지인추천">지인추천</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <th>취미</th>
                     <td>
-                        <input type="checkbox" name="hobby[]" id="reading"><label for="reading">독서</label>
-                        <input type="checkbox" name="hobby[]" id="fishing"><label for="fishing">낚시</label>
-                        <input type="checkbox" name="hobby[]" id="swimming"><label for="swimming">수영</label>
+                        <input type="checkbox" name="hobby" id="reading" value="독서"><label for="reading">독서</label>
+                        <input type="checkbox" name="hobby" id="fishing" value="낚시"><label for="fishing">낚시</label>
+                        <input type="checkbox" name="hobby" id="swimming" value="수영"><label for="swimming">수영</label>
                     </td>
                 </tr>
                 <tr>
                     <th>성별</th>
                     <td>
-                        <input type="radio" name="gender" value="male" id="male"><label for="male">남자</label>
-                        <input type="radio" name="gender" value="female" id="female"><label for="female">여자</label>
+                        <input type="radio" name="gender" value="남자" id="male"><label for="male">남자</label>
+                        <input type="radio" name="gender" value="여자" id="female"><label for="female">여자</label>
                     </td>
                 </tr>
                 <tr>
@@ -106,7 +106,7 @@
                 </tr>
             </tbody>
             <tfoot>
-<!--                <td><button onclick="checkMailingToPic();">회원가입</button></td>-->
+                <!-- <td><button onclick="checkMailingToPic();">회원가입</button></td> -->
                 <td><button onclick="submit();">회원가입</button></td>
             </tfoot>
         </table>

@@ -1,6 +1,8 @@
 
 function submit(){
-    let result = checkNameToEmail();
+    let NameToEmail = checkNameToEmail();
+    let MailingToGender = checkMailingToGender();
+    let result = NameToEmail + MailingToGender;
     alert(result);
 }
 function checkNameToEmail() {
@@ -44,29 +46,96 @@ function checkNameToEmail() {
 }
 
 function word(i){
-    const indexNum = [0, 1, 9, 10, 11];
     let word = '을';
-    if (indexNum.includes(i)){
+    if (i < 2){
         word = '를';
     }
     return word;
 }
 
-function checkMailingToPic(){
-    let result = checkMailing();
-    alert(result);
+function checkMailingToGender(){
+    let mailValue = checkMailSmsGender('mail'); 
+    let smsValue = checkMailSmsGender('sms'); 
+    let phoneNum = getPhoneNum();
+    let joinPath = getJoinPath();
+    let hobby = getCheckboxValue();
+    let gender = checkMailSmsGender('gender');
+
+    let result = mailValue + smsValue +phoneNum + joinPath + hobby + gender;
+    return result;
 }
-
-function checkMailing(){
-    const mailNodelist = document.getElementsByName("email_send");
+ilSMSGen
+function checkMailSmsGender(name){
     let result = '';
+    let message = '';
+    let byname = '';
+    
+    if (name == 'mail'){
+        byname = "email_send";
+        message = "이메일 수신"        
+    } else if (name=='sms'){
+        byname = "sms_send";
+        message = "SMS 수신";
+    } else {
+        byname = "gender";
+        message ="성별"
+    }
 
-    mailNodelist.forEach((node) => {
+    let Nodelist = document.getElementsByName(byname);
+    Nodelist.forEach((node) => {
         if(node.checked) {
-            result += "이메일수신 : " + node.value;
+            result += message + " : " + node.value +'\n';
         } else result += '';
     })
     if (result.length == 0)
-        result += "이메일 수신에 체크해주세요."
+        result += message +"에 체크해주세요. \n"
+    
+    return result;
+}
+
+function getPhoneNum(){
+    let result = '';
+    let start = document.getElementById('phone_front');
+    let startNum = start.options[start.selectedIndex].value;
+    let midNum = document.getElementById('phone_mid').value;
+    let lastNum = document.getElementById('phone_end').value;
+    
+    if (!midNum | !lastNum | isNaN(midNum)| isNaN(lastNum)|(startNum=='010' & midNum.length<4)|midNum.length < 3 | lastNum.length <4){
+        result += "연락처를 입력해주세요. \n";   
+    } else result += startNum + "-" + midNum + "-" + lastNum +'\n';
+    
+    
+    return result;
+}
+
+function getJoinPath(){
+    let path = document.getElementById('come_path');
+    let pathValue = path.options[path.selectedIndex].value;
+    
+    if (pathValue == 'none'){
+        return "가입경로를 선택해주세요. \n";
+    }
+    return "가입경로 : " + pathValue + "\n";
+}
+
+function getCheckboxValue() {
+    // 선택된 목록 가져오기
+    const query = 'input[name="hobby"]:checked';
+    const selectedEls = 
+        document.querySelectorAll(query);
+    
+    // 선택된 목록에서 value 찾기
+    let result = '';
+    let select = ''
+    selectedEls.forEach((check) => {
+        select += check.value + ' ';
+    });
+    
+    if(select.length == 0){
+        result = "취미를 선택해주세요.\n";
+    } else { 
+        result = "취미 : " + select + "\n";
+    }
+
     return result;
 }
