@@ -3,8 +3,8 @@
 }
 table {
     border: 2px solid black;
-    /*border-collapse: collapse;*/
     border-spacing: 0;
+    margin: 10vh auto ;
 }
 
 .col1{
@@ -20,7 +20,7 @@ table {
     width: 200px;
 }
 .col5{
-    width: 80px;
+    width: 70px;
 }
 .up_title{
     padding:0;
@@ -29,29 +29,75 @@ table {
     background-color: #7dbe98;
     border-bottom-style: double;
 }
+.space{
+    letter-spacing: 3px;
+    text-align: center;
+    padding-right: 0;
+}
 thead{
-    font-size: 14px;
+    font-size: 12px;
 }
 thead th:not(#note_title){
     border-right:1px solid black;
 }
+
 tbody{
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
 }
-tbody th, tbody td{
-    font-weight: lighter;
+tbody th{
+    background-color: #eaea97;
+}
 
+tbody th, tbody td{
+    font-weight: normal;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
 }
 .normal{
     height: 100px;
+    padding-left:2px;
+    text-align: center;
 }
-.book{
-
+.group{
+    height: 100px;
 }
 .benefit{
-
+    height: 60px;
 }
 .free{
-
+    border-bottom: none;
+    height: 100px;
 }
+.price {
+    text-align: right;
+    padding-right: 5px;
+}
+.nonfree_desc{
+    text-align: left;
+    padding-left: 3px;
+    line-height : 15px;
+}
+.free_desc1 {
+    height: 50px;
+    line-height : 15px;
+    text-align: left;
+    padding-left: 20px;
+}
+.free_desc2{
+    text-align: left;
+    line-height : 15px;
+    padding-left: 20px;
+}
+.note {
+    font-size: 11px;
+    font-weight: bold;
+    color : #003ca9;
+    text-align: left;
+    border-right: none;
+}
+.innerspace{
+    width: 5px;
+    color: rgba(0,0,0,0);
+}
+
