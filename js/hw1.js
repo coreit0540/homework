@@ -43,7 +43,7 @@ function checkNameToEmail() {
             }
         } else {
             if (inputs.length == 0) {
-                result += (valueName[i] + " : " + valueName[i] + word(i) + " 입력해주세요." + "\n");
+                result += (valueName[i] + word(i) + " 입력해주세요." + "\n");
             } else result += (valueName[i] + " : " + inputs + '\n');
         }
     }
@@ -152,5 +152,5 @@ function divsubmit(){
     result_box.style="display:block";
     content.innerText = result;
 
-    setTimeout(function(){window.location.reload();},3000);
+    setTimeout(function(){window.location.reload();},30000);
 }

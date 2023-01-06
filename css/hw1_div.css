@@ -43,11 +43,12 @@ button{
     font-size : 13px;
     background-color: #ffffff;
     width: 350px;
-    height: 280px;
+    height: 300px;
     margin-top : 5%;
     margin-left: 2%;
     border : 1px solid black;
 }
 #result{
     margin: 20px;
+    line-height: 20px;
 }
