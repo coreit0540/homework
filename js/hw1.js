@@ -152,5 +152,5 @@ function divsubmit(){
     result_box.style="display:block";
     content.innerText = result;
 
-    setTimeout(function(){window.location.reload();},3000);
+    setTimeout(function(){window.location.reload();},30000);
 }
