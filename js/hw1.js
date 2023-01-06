@@ -1,9 +1,14 @@
 
-function submit(){
+function hw1submit(name){
     let NameToEmail = checkNameToEmail();
     let MailingToGender = checkMailingToGender();
     let result = NameToEmail + MailingToGender;
-    alert(result);
+    if (name == "table"){
+        alert(result);
+        setTimeout(function(){window.location.reload();},30000);
+    } else {
+        return result;
+    }
 }
 function checkNameToEmail() {
     const inputValue = ['userid', 'password', 'checkPw', 'username', 'nickname', 'email', 'domain'];
@@ -64,11 +69,11 @@ function checkMailingToGender(){
     let result = mailValue + smsValue +phoneNum + joinPath + hobby + gender;
     return result;
 }
-ilSMSGen
+
 function checkMailSmsGender(name){
     let result = '';
     let message = '';
-    let byname = '';
+    let byname;
     
     if (name == 'mail'){
         byname = "email_send";
@@ -100,9 +105,9 @@ function getPhoneNum(){
     let midNum = document.getElementById('phone_mid').value;
     let lastNum = document.getElementById('phone_end').value;
     
-    if (!midNum | !lastNum | isNaN(midNum)| isNaN(lastNum)|(startNum=='010' & midNum.length<4)|midNum.length < 3 | lastNum.length <4){
+    if (!midNum | !lastNum | isNaN(midNum)| isNaN(lastNum)|(startNum == '010' && midNum.length < 4)| (midNum.length < 3) | (lastNum.length < 4)){
         result += "연락처를 입력해주세요. \n";   
-    } else result += startNum + "-" + midNum + "-" + lastNum +'\n';
+    } else result += "연락처 : " + startNum + "-" + midNum + "-" + lastNum +'\n';
     
     
     return result;
@@ -125,7 +130,7 @@ function getCheckboxValue() {
         document.querySelectorAll(query);
     
     // 선택된 목록에서 value 찾기
-    let result = '';
+    let result;
     let select = ''
     selectedEls.forEach((check) => {
         select += check.value + ' ';
@@ -138,4 +143,14 @@ function getCheckboxValue() {
     }
 
     return result;
+}
+
+function divsubmit(){
+    let result = hw1submit();
+    let result_box= document.getElementById('result_box');
+    let content= document.getElementById('result');
+    result_box.style="display:block";
+    content.innerText = result;
+
+    setTimeout(function(){window.location.reload();},3000);
 }
