@@ -1,11 +1,19 @@
+.container{
+    display: flex;
+    width: 2010px;
+}
 form{
     background-color: whitesmoke;
     width: 580px;
     height: 360px;
-    margin : 10% auto;
+    margin-top : 5%;
+    margin-left: 2%;
     border : 2px solid black;
 }
 
+.hidden{
+    display: none;
+}
 p {
     height: 6px;
 }
@@ -28,4 +36,18 @@ button{
     width: 73px;
     margin-top: 35px;
     margin-left: 133px;
+}
+
+#result_box{
+    display: none;
+    font-size : 13px;
+    background-color: #ffffff;
+    width: 350px;
+    height: 280px;
+    margin-top : 5%;
+    margin-left: 2%;
+    border : 1px solid black;
+}
+#result{
+    margin: 20px;
 }

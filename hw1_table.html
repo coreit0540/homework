@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
     <head>
-        <meta charset="KO">
+        <meta charset="utf-8">
         <title>&#60과제1&#62Tabel태그로 만든 폼</title>
-        <link rel="stylesheet" href="hw1_table.css">
-        <link rel="stylesheet" href="js/hw1_table.js">
+        <link rel="stylesheet" href="css/hw1_table.css">
     </head>
     <body>
         <table>
@@ -21,8 +20,8 @@
                     <td><input type="password" name="password" id="password"></td>
                 </tr>
                 <tr>
-                    <th><label for="passwordcheck">패스워드 확인</label></th> 
-                    <td><input type="password" name="passwordcheck" id="passwordcheck"></td>
+                    <th><label for="checkPw">패스워드 확인</label></th>
+                    <td><input type="password" name="checkPw" id="checkPw"></td>
                 </tr>
                 <tr>
                     <th><label for="username">이름</label></th>
@@ -48,29 +47,29 @@
                 <tr>
                     <th>이메일수신</th>
                     <td>
-                        <input type="radio" name="email_send" value="agree" id="mail_yes"><label for="mail_yes">수신</label>
-                        <input type="radio" name="email_send" value="deny" id="mail_no"><label for="mail_no">미수신</label>
+                        <input type="radio" name="email_send" value="수신" id="mail_yes"><label for="mail_yes">수신</label>
+                        <input type="radio" name="email_send" value="미수신" id="mail_no"><label for="mail_no">미수신</label>
                     </td>
                 </tr>
                 <tr>
                     <th>SMS수신</th>
                     <td>
-                        <input type="radio" name="sms_send" value="agree" id="sms_yes"><label for="sms_yes">수신</label>
-                        <input type="radio" name="sms_send" value="deny" id="sms_no"><label for="sms_no">미수신</label>
+                        <input type="radio" name="sms_send" value="수신" id="sms_yes"><label for="sms_yes">수신</label>
+                        <input type="radio" name="sms_send" value="미수신" id="sms_no"><label for="sms_no">미수신</label>
                     </td>
                 </tr>
                 <tr>
                     <th><label for="phone_mid">연락처</label></th>
                     <td>
-                        <select name="phone_front" id="">
+                        <select name="" id="phone_front">
                             <option value="010">010</option>
                             <option value="011">011</option>
                             <option value="016">016</option>
                             <option value="018">018</option>
                         </select>
                         <span class="hyphen">-</span>
-                        <input id="phone_mid" type="type" maxlength="4">
-                        <span class="hyphen">- </span><input id="phone_end" type="type" maxlength="4">
+                        <input id="phone_mid" type="text" maxlength="4">
+                        <span class="hyphen">- </span><input id="phone_end" type="text" maxlength="4">
                     </td>
                 </tr>
                 <tr>
@@ -78,25 +77,25 @@
                     <td>
                         <select name="" id="come_path">
                             <option value="none">- 선택해 주세요-</option>
-                            <option value="">네이버 카페</option>
-                            <option value="">광고</option>
-                            <option value="">지인추천</option>
+                            <option value="네이버 카페">네이버 카페</option>
+                            <option value="광고">광고</option>
+                            <option value="지인추천">지인추천</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <th>취미</th>
                     <td>
-                        <input type="checkbox" name="hobby[]" id="reading"><label for="reading">독서</label>
-                        <input type="checkbox" name="hobby[]" id="fishing"><label for="fishing">낚시</label>
-                        <input type="checkbox" name="hobby[]" id="swimming"><label for="swimming">수영</label>
+                        <input type="checkbox" name="hobby" id="reading" value="독서"><label for="reading">독서</label>
+                        <input type="checkbox" name="hobby" id="fishing" value="낚시"><label for="fishing">낚시</label>
+                        <input type="checkbox" name="hobby" id="swimming" value="수영"><label for="swimming">수영</label>
                     </td>
                 </tr>
                 <tr>
                     <th>성별</th>
                     <td>
-                        <input type="radio" name="gender" value="male" id="male"><label for="male">남자</label>
-                        <input type="radio" name="gender" value="female" id="female"><label for="female">여자</label>
+                        <input type="radio" name="gender" value="남자" id="male"><label for="male">남자</label>
+                        <input type="radio" name="gender" value="여자" id="female"><label for="female">여자</label>
                     </td>
                 </tr>
                 <tr>
@@ -107,10 +106,11 @@
                 </tr>
             </tbody>
             <tfoot>
-                <th></th>
-                <td><button>회원가입</button></td>
+                <tr>
+                    <td colspan="2"><button onclick="hw1submit('table');">회원가입</button></td>
+                </tr>
             </tfoot>
         </table>
     </body>
-<script src="hw1_tabel.js"></script>
+    <script src="js/hw1.js"></script>
 </html>
